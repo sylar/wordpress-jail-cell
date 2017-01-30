@@ -1,11 +1,11 @@
 # Wordpress Jail Cell.
 
-## Description.
+### Description.
 This is a jail cell in which you can run and develop safely a wordpress based project.
 
 It is based on `docker` and make sure [Docker](https://www.docker.com/) is installed on your system.
 
-## Make it work.
+### Make it work.
 
 - Clone the project.
 ```sh
@@ -61,8 +61,8 @@ If everything is configured correctly, opening [localhost:8080](http://localhost
 
 - Refresh the page and enjoy using Wordpress from a harmless jail cell 😀
 
-## The rest of the info.
-- It uses [MariaDB](https://mariadb.com/ instead of [MySQL](https://www.mysql.com/), which is fully compatible with the `mysql` commands.
+### The rest of the info.
+- It uses [MariaDB](https://mariadb.com/) instead of [MySQL](https://www.mysql.com/), which is fully compatible with the `mysql` commands.
 
 - To stop the containers you either `cd` in the project folder and then run
 ```sh
@@ -83,8 +83,8 @@ If everything is configured correctly, opening [localhost:8080](http://localhost
 
 - The wordpress theme will live in the `wordpress` folder and whatever modifications are made from through your favourite editor will be reflected on the next refresh of [localhost:8080](http://localhost:8080).
 
-## Todos and PRs.
+### Todos and PRs.
 I am very sure that improvements can be made so don't be afraid to PR them 😁.
 
-## License.
+### License.
 MIT.
