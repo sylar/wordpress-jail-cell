@@ -47,7 +47,7 @@ WORDPRESS_DB_PASSWORD=<user_password>
 WORDPRESS_DB_USER=<user>
 ```
 
-- `cd` into the root folder of the clone and run
+- `cd` into the root folder of the clone and start the containers
 ```sh
 > docker-compose up
 ```
@@ -74,12 +74,17 @@ If everything is configured correctly, opening [localhost:8080](http://localhost
 > docker stop wp_blog wp_backup wp_db
 ```
 
+- To rerun the project, cd in the root of the clone and start it
+```sh
+> docker-compose up
+```
+
 - To perform a backup run
 ```sh
 > docker exec wp_backup backup
 ```
 
-- To change the name of the containers, don't be afraid to open `docker-compose.yml` and edit the `container_name` keys as you wish. Keep in min to use the new name in the commands that are using them.
+- To change the name of the containers, don't be afraid to open `docker-compose.yml` and edit the `container_name` keys as you wish. Keep in mind to use the new names in the commands that are using them.
 
 - The wordpress theme will live in the `wordpress` folder and whatever modifications are made from through your favourite editor will be reflected on the next refresh of [localhost:8080](http://localhost:8080).
 
