@@ -5,11 +5,14 @@ This is a jail cell in which you can run and develop safely a wordpress based pr
 
 It is based on `docker` and make sure [Docker](https://www.docker.com/) is installed on your system.
 
+Basically what it does is mounting the host's `wordpress` folder containing the theme in to the `wp_blog` container so that you can edit the theme in your editor of choice and run the changes in the container.
+And the `db` has it's own container 😊.
+
 ### Make it work.
 
 - Clone the project.
 ```sh
-> git clone https://github.com/andreiconstantinescu/wp-jail-cell
+> git clone https://github.com/andreiconstantinescu/wordpress-jail-cell
 ```
 
 - Make it yours.
