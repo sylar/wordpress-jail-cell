@@ -10,7 +10,7 @@ services:
     ports:
       - 8080:80
     environment:
-      - WORDPRESS_DB_HOST: mariadb
+      WORDPRESS_DB_HOST: mariadb
     env_file: .env/wp.env
   mariadb:
     image: mariadb
@@ -27,6 +27,8 @@ services:
     image: aveltens/wordpress-backup
     container_name: wp_backup
     env_file: .env/backup.env
+    environment:
+      MYSQL_PORT_3306_TCP_PORT: 3306
     volumes:
       - ./backups:/backups
     volumes_from:
