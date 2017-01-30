@@ -1,0 +1,37 @@
+version: '2'
+services:
+  wordpress:
+    image: wordpress
+    container_name: wp_blog
+    depends_on:
+      - mariadb
+    volumes:
+      - ./wordpress:/var/www/html
+    ports:
+      - 8080:80
+    environment:
+      - WORDPRESS_DB_HOST: mariadb
+    env_file: .env/wp.env
+  mariadb:
+    image: mariadb
+    container_name: wp_db
+    env_file: .env/mariadb.env
+    expose:
+      - 3306
+    volumes:
+      - data:/var/lib/mysql
+  backup:
+    depends_on:
+      - mariadb
+      - wordpress
+    image: aveltens/wordpress-backup
+    container_name: wp_backup
+    env_file: .env/backup.env
+    volumes:
+      - ./backups:/backups
+    volumes_from:
+      - wordpress
+    links:
+      - "mariadb:mysql"
+volumes:
+  data: {}
