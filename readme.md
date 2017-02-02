@@ -1,5 +1,7 @@
 # Wordpress Jail Cell.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5ae916bfe77444308258598a97b6fd73)](https://www.codacy.com/app/andreiconstantinescu/wordpress-jail-cell?utm_source=github.com&utm_medium=referral&utm_content=andreiconstantinescu/wordpress-jail-cell&utm_campaign=badger)
+
 ### Description.
 This is a jail cell in which you can run and develop safely a wordpress based project.
 
